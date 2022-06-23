@@ -16,7 +16,7 @@ public class Chore {
         Logger log = new Logger();
         log.log(String.format("Completed %s", choreName));
 
-        Email email = new Email();
-        email.sendEmail(owner, String.format("The chore %s is complere", choreName));
+        Emailer emailer = new Emailer();
+        emailer.sendEmail(owner, String.format("The chore %s is complere", choreName));
     }
 }

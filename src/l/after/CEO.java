@@ -1,17 +1,12 @@
-package l.before;
+package l.after;
 
-public class CEO extends Employee {
+public class CEO extends BaseEmployee implements Manager {
 
     @Override
     public void calculatePerHourRate(int rank) {
         double baseAmount = 150;
 
         salary = baseAmount * rank;
-    }
-
-    @Override
-    public void assignManager(Employee manager) {
-        throw new UnsupportedOperationException("The CEO has no manager");
     }
 
     public void generatePerformanceReview() {

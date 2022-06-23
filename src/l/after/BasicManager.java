@@ -1,6 +1,6 @@
-package l.before;
+package l.after;
 
-public class Manager extends Employee {
+public class BasicManager extends BasicEmployee implements Manager {
 
     @Override
     public void calculatePerHourRate(int rank) {
@@ -9,6 +9,7 @@ public class Manager extends Employee {
         salary = baseAmount + (rank * 4);
     }
 
+    @Override
     public void generatePerformanceReview() {
         System.out.println("I'm reviewing a direct report's performance.");
     }
